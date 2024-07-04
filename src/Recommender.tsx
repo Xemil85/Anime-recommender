@@ -7,7 +7,8 @@ interface Anime {
     picture: string,
     type: string,
     episodes: number,
-    genres?: string[]
+    genres?: string[],
+    status: string
 }
 
 const Container = styled.div`
@@ -69,10 +70,10 @@ const Recommender = () => {
                 picture: data.images.jpg.image_url,
                 type: data.type,
                 episodes: data.episodes,
-                genres: data.genres ? data.genres.map((genre: { name: string }) => genre.name) : undefined
+                genres: data.genres ? data.genres.map((genre: { name: string }) => genre.name) : undefined,
+                status: data.status
             }
             setAnime(newAnime);
-            console.log(newAnime.genres)
             console.log(data);
         } catch (error) {
             console.error('There was an error fetching the anime data:', error);
@@ -90,6 +91,7 @@ const Recommender = () => {
                 <AnimeInfo><b>Title:</b> {anime?.name}</AnimeInfo>
                 <AnimeInfo><b>Type:</b> {anime?.type}</AnimeInfo>
                 <AnimeInfo><b>Episodes:</b> {anime?.episodes}</AnimeInfo>
+                <AnimeInfo><b>Status:</b> {anime?.status}</AnimeInfo>
                 <AnimeInfo><b>Genres:</b> {anime?.genres && anime.genres.length > 0 ? (
                     anime?.genres.join(', ')
                 ) : (
