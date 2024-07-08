@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Anime-recommender/static/css/main.bf4a940b.css",
+    "main.js": "/Anime-recommender/static/js/main.4f909874.js",
+    "index.html": "/Anime-recommender/index.html",
+    "main.bf4a940b.css.map": "/Anime-recommender/static/css/main.bf4a940b.css.map",
+    "main.4f909874.js.map": "/Anime-recommender/static/js/main.4f909874.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bf4a940b.css",
+    "static/js/main.4f909874.js"
+  ]
+}
